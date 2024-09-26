@@ -10,8 +10,8 @@ public class Networking {
   private Networking() {
   }
 
-  public static final Identifier SYNC_C2S = new Identifier(TrueSightMod.MOD_ID, "sync_c2s");
-  public static final Identifier SYNC_S2C = new Identifier(TrueSightMod.MOD_ID, "sync_s2c");
+  public static final Identifier SYNC_C2S = Identifier.of(TrueSightMod.MOD_ID, "sync_c2s");
+  public static final Identifier SYNC_S2C = Identifier.of(TrueSightMod.MOD_ID, "sync_s2c");
 
   public static void registerPayloads() {
     PayloadTypeRegistry.playC2S().register(SyncC2S.ID, SyncC2S.CODEC);
