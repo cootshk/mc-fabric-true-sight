@@ -3,7 +3,7 @@
   "id": "truesight",
   "version": "${version}",
   "name": "True Sight",
-  "description": "Force invisible entities to render with F3 + M.\n${library}",
+  "description": "Force invisible entities to render with F3 + V.\n${library}",
   "authors": [
     "Roundaround"
   ],
@@ -14,13 +14,20 @@
   },
   "license": "MIT",
   "icon": "assets/truesight/icon.png",
-  "environment": "client",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "me.roundaround.truesight.TrueSightMod"
+    ],
+    "client": [
+      "me.roundaround.truesight.TrueSightClientMod"
+    ]
+  },
   "mixins": [
     "truesight.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=0.13.3",
-    "minecraft": "1.20.*",
-    "java": ">=17"
+    "minecraft": "1.20.*"
   }
 }
